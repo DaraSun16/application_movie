@@ -27,6 +27,9 @@ let getMovie = () => {
               <span>${data.Year}</span>
               <span>${data.Runtime}</span>
             </div>
+            <div class="mobile">
+              <img src="${data.Poster}" class="poster" alt="Image du film">
+            </div>
             <div class="genre">
               <div>${data.Genre.split(",").join("</div><div>")}</div>
             </div>
@@ -39,7 +42,7 @@ let getMovie = () => {
               </div>
             </div>
           </div>
-          <img src="${data.Poster}" alt="Image du film" class="poster">
+          <img src="${data.Poster}" class="desktop" alt="Image du film" class="poster">
        </div>
         `;
       } else {
