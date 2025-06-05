@@ -27,9 +27,21 @@ let getMovie = () => {
               <span>${data.Year}</span>
               <span>${data.Runtime}</span>
             </div>
+            <div class="genre">
+              <div>${data.Genre.split(",").join("</div><div>")}</div>
+            </div>
+            <div class="content">
+              <h3>Plot:</h3>
+              <p>${data.Plot}</p>
+              <h3>Casting</h3>
+              <div>
+                <p>${data.Actors.split(", ").join("</p><p")}</p>
+              </div>
+            </div>
           </div>
-        </div>
-        `
+          <img src="${data.Poster}" alt="Image du film" class="poster">
+       </div>
+        `;
       } else {
         // si le film n'existe pas dans la base de données
         result.innerHTML = `<h3 class="msg">${data.error} (le film n'existe pas)</h3>`;
